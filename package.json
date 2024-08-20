@@ -1,0 +1,14 @@
+{
+  "name": "keepy",
+  "version": "1.0.0",
+  "description": "Note taking CLI",
+  "main": "index.js",
+  "bin": {
+    "note": "./index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
