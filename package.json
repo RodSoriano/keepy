@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Note taking CLI",
   "main": "index.js",
+  "type": "module",
   "bin": {
     "note": "./index.js"
   },
