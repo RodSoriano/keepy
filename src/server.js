@@ -36,7 +36,7 @@ const start = (notes, port) => {
   const server = createServer(notes);
 
   server.listen(port, () => {
-    const url = `http://127.0.0.1:${port}`;
+    const url = `http://localhost:${port}`;
     console.log(`Server is listening on: ${url}`);
     open(url);
   });
