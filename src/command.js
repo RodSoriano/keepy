@@ -1,5 +1,7 @@
 import yargs from 'yargs';
 import { hideBin } from 'yargs/helpers';
+
+import start from './server.js';
 import { prettyNotesList } from './utils.js';
 import { allNotes, findNotes, newNote, removeAllNotes, removeNote } from './notes.js';
 
@@ -45,12 +47,15 @@ yargs(hideBin(process.argv))
     return yargs.positional('port', {
       type: 'number',
       description: 'The port to start the server on',
-      default: 5000,
+      default: 5009,
     });
-  }, () => {})
+  }, async argv => {
+    const notes = await allNotes();
+    start(notes, argv.port);
+  })
   .command('clean', 'Remove all notes', () => {}, async () => { // Clean
     await removeAllNotes();
-    console.log('Database has bee cleared');
+    console.log('Database has been cleared');
   })
   .demandCommand(1)
   .parse();
