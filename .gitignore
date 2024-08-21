@@ -3,3 +3,6 @@
 
 # Ignore environment files
 .env
+
+# Ignore database related files
+db.json
