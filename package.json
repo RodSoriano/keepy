@@ -4,15 +4,18 @@
   "description": "Note taking CLI",
   "main": "index.js",
   "type": "module",
+  "scripts": {
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+  },
   "bin": {
     "note": "./index.js"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "yargs": "17.7.2"
+  },
+  "devDependencies": {
+    "jest": "29.7.0"
   }
 }
